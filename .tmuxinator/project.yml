@@ -1,0 +1,17 @@
+# ~/.tmuxinator/project.yml
+# you can make as many tabs as you wish...
+
+project_name: Tmuxinator
+project_root: ~/project
+pre: cd ~/project
+tabs:
+  - editor:
+      panes:
+        - vim .
+  - shell: git pull
+  - database: bundle exec rails db
+  - server: bundle exec rails s
+  - logs: tail -f logs/development.log
+  - console: bundle exec rails c
+  - capistrano:
+  - server: ssh me@myhost
